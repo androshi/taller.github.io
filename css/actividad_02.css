@@ -1,0 +1,247 @@
+header,
+section,
+footer,
+aside,
+nav,
+article,
+figure,
+figcaption {
+  display: block;
+}
+
+body {
+  color: #666666;
+  background-color: #f9f8f6;
+  background-position: center;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4em;
+  margin: 0px;
+}
+
+.wrapper {
+  width: 940px;
+  margin: 20px auto 20px auto;
+  border: 0px solid #000000;
+  background-color: #181717;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+  color: #ffffff;
+  display: block;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+header {
+  height: 160px;
+  background-color: black;
+  text-align: center;
+
+}
+
+h6 {
+  text-align: center;
+  font-size: xx-large;
+
+}
+
+h1 {
+
+  width: 940px;
+  height: 130px;
+  margin-top: 0px;
+  color: white;
+  text-align: center;
+}
+
+nav,
+footer {
+  clear: both;
+  color: #ffffff;
+  background-color: #0e1b46;
+  height: 30px;
+}
+
+nav ul {
+  margin: 0px;
+  padding: 5px 0px 5px 30px;
+}
+
+nav li {
+  display: inline;
+  margin-right: 40px;
+}
+
+nav li a {
+  color: #ffffff;
+}
+
+nav li a:hover,
+nav li a.current {
+  color: #000000;
+}
+
+section.courses {
+  float: left;
+  width: 659px;
+  border-right: 1px solid #eeeeee;
+}
+
+article {
+  clear: both;
+  width: 100%;
+}
+
+hgroup {
+  margin-top: 40px;
+}
+
+figure {
+  float: left;
+  width: 290px;
+  height: 220px;
+  padding: 5px;
+  margin: 20px;
+  border: 1px solid #eeeeee;
+}
+
+figcaption {
+  font-size: 90%;
+  text-align: left;
+}
+
+aside {
+  width: 230px;
+  float: left;
+  padding: 0px 0px 0px 20px;
+}
+
+aside section a {
+  display: block;
+  padding: 10px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+aside section a:hover {
+  color: #985d6a;
+  background-color: #efefef;
+}
+
+a {
+  color: #f5f5f7;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
+
+h2 {
+  margin: 10px 0px 5px 0px;
+  padding: 0px;
+}
+
+h3 {
+  margin: 0px 0px 10px 0px;
+  color: #f1eeef;
+}
+
+aside h2 {
+  padding: 30px 0px 10px 0px;
+  color: #f3ecee;
+}
+
+footer {
+  font-size: 80%;
+  padding: 7px 0px 0px 20px;
+}
+
+.Titulo {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 18px;
+}
+
+.btn{
+  width: 100px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 18px;
+  background-color: #0e1b46;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #eeeeee;
+}
+
+.btn:hover{
+  animation-name: shaking;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    width: 900px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    width: 85%;
+  }
+
+  aside,
+  section.courses {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  aside {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  hgroup {
+    margin-top: 10px;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  aside h2 {
+    padding: 15px 0 5px;
+  }
+
+  figure {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+  }
+}
+
+@keyframes shaking {
+  0% { transform: translateX(0) }
+  25% { transform: translateX(2px) }
+  50% { transform: translateX(-2px) }
+  75% { transform: translateX(2px) }
+  100% { transform: translateX(0) }
+ }

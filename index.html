@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bitacora De Actividades</title>
+  <title>Bitácora De Actividades</title>
   <style>
     body {
       margin: 0;
@@ -18,43 +18,73 @@
       background-color: #3768B0;
       color: #BB9500;
       text-align: center;
-      padding: 20px;
+      padding: 10px;
     }
 
-    h1,
-    h2 {
+    h1 {
       margin: 0;
+      font-size: 24px;
+      /* Hacer el encabezado más delgado */
     }
 
     .container {
+      display: flex;
+      justify-content: space-evenly;
       max-width: 1200px;
       margin: 0 auto;
       padding: 20px;
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
     }
 
-    th,
-    td {
+    .logo {
+      /* Modifica el logo en el navbar */
+      width: 100px;
+      /* Ancho personalizado */
+    }
+
+    .activity-card {
       border: 1px solid #B2685F;
       padding: 10px;
-      text-align: left;
+      margin: 10px 0;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      max-width: 250px;
+      min-width: 250px;
     }
 
-    th {
+    .activity-card-header {
+      text-align: center;
       background-color: #FC6E5B;
-      color: #428DFC
+      color: black;
+      padding: 5px;
+      border-radius: 5px 5px 0 0;
     }
 
-    a {
-      color: #1776CA;
+    .activity-card:hover {
+      animation-name: shaking;
+      animation-duration: 0.5s;
+      animation-iteration-count: infinite;
     }
 
     @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        /* Cambia la dirección de flex a columna */
+        align-items: center;
+        /* Centra los elementos en el eje vertical */
+      }
+
+      .activity-card {
+        max-width: none;
+        /* Elimina el límite máximo de ancho */
+      }
+
       h1 {
         font-size: 28px;
       }
@@ -62,14 +92,27 @@
       .container {
         padding: 10px;
       }
+    }
 
-      table {
-        font-size: 14px;
+    @keyframes shaking {
+      0% {
+        transform: translate(0, 0) rotate(0deg);
       }
 
-      th,
-      td {
-        padding: 5px;
+      25% {
+        transform: translate(3px, 3px) rotate(3deg);
+      }
+
+      50% {
+        transform: translate(0, 0) rotate(0eg);
+      }
+
+      75% {
+        transform: translate(-3px, 3px) rotate(-3deg);
+      }
+
+      100% {
+        transform: translate(0, 0) rotate(0deg);
       }
     }
   </style>
@@ -77,42 +120,45 @@
 
 <body>
   <header>
-    <h1>Bitacora de Actividades PWII</h1>
+    <nav>
+      <img src="./images/iuc.png" alt="Universitaria de Colombia" class="logo" />
+      <h1>Bitácora de Actividades PWII</h1>
+    </nav>
     <h2>Desarrollado por: Andrés López</h2>
   </header>
-  <img src="./images/iuc.png" alt="Universitaria de Colombia" />
+
   <div class="container">
-    <table>
-      <thead>
-        <tr>
-          <th>Nombre Actividad</th>
-          <th>Enlace de la Actividad</th>
-          <th>Desarrollo de Actividades</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Primera Actividad</td>
-          <td><a href="actividad_01.html" target="_blank">actividad_01</a></td>
-          <td><a href="#" target="_blank">Personalizada</a></td>
-        </tr>
-        <tr>
-          <td>Segunda Actividad</td>
-          <td><a href="actividad_02.html" target="_blank">actividad_02</a></td>
-          <td><a href="#" target="_blank">Personalizada</a></td>
-        </tr>
-        <tr>
-          <td>Tercera Actividad</td>
-          <td><a href="actividad_03.html" target="_blank">actividad_03</a></td>
-          <td><a href="#" target="_blank">Personalizada</a></td>
-        </tr>
-        <tr>
-          <td>Cuarta Actividad</td>
-          <td><a href="actividad_04.html" target="_blank">actividad_04</a></td>
-          <td><a href="#" target="_blank">Personalizada</a></td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="activity-card">
+      <div class="activity-card-header">Primera Actividad</div>
+      <div><a href="actividad_01.html" target="_blank">actividad_01</a></div>
+      <hr>
+      <div><a href="#" target="_blank">Personalizada</a></div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-card-header">Segunda Actividad</div>
+      <div><a href="actividad_02.html" target="_blank">actividad_02</a></div>
+      <hr>
+      <div><a href="#" target="_blank">Personalizada</a></div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-card-header">Tercera Actividad</div>
+      <div><a href="actividad_03.html" target="_blank">actividad_03</a></div>
+      <hr>
+      <div><a href="#" target="_blank">Personalizada</a></div>
+    </div>
+
+    <div class="activity-card">
+      <div class="activity-card-header">Cuarta Actividad</div>
+      <div><a href="actividad_04.html" target="_blank">actividad_04</a></div>
+      <hr>
+      <div><a href="#" target="_blank">Personalizada</a></div>
+    </div>
+
+
+    <!-- Repite la estructura de la tarjeta para cada actividad -->
+
   </div>
 </body>
 
